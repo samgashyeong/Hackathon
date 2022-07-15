@@ -62,16 +62,6 @@
                     android:inputType="numberPassword"
                     android:textSize="25dp" />
 
-                <EditText
-                    android:id="@+id/prophonEt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:maxLength="11"
-                    android:inputType="number"
-                    android:textSize="25dp"
-                    android:hint="보호자 연락처 입력하기!" />
-
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
