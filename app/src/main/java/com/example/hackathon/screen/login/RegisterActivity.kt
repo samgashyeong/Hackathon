@@ -12,6 +12,7 @@ import android.telephony.TelephonyManager
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
@@ -36,7 +37,12 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-    
+
+        findViewById<AppCompatButton>(R.id.backBtn)
+            .setOnClickListener {
+                finish()
+            }
+
         val shared = getSharedPreferences("user", Context.MODE_PRIVATE)
         val editor = shared.edit()
         chkPermission()
