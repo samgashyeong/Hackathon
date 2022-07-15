@@ -2,4 +2,105 @@
     <string name="app_name">Hackathon</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment11">Hello blank fragment</string>
+
+    <string-array name="quiz_initial_sound_lv1_array">
+        <item>이것은 집에서 애완동물로 주로 기르는 동물이에요. \nㄱㅇㅇ은 무엇일까요?</item>
+        <item>이것은 과일이고 보라색을 띄고 있어요. \n ㅍㄷ는 무엇일까요?</item>
+        <item>이것은 나라의 이름이고 인구수가 매우 많은 나라에요. ㅈㄱ은 무엇일까요?</item>
+        <item>이것은 매우 이쁜 식물이라서 사람들이 매우 좋아하는 식물이에요.\n ㅈㅁ는 무엇일까요?</item>
+        <item>이것은 목이 매우 긴 동물이에요. ㄱㄹ는 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_initial_sound_lv1_answer_array">
+        <item>고양이</item>
+        <item>포도</item>
+        <item>중국</item>
+        <item>장미</item>
+        <item>기린</item>
+    </string-array>
+
+
+    <string-array name="quiz_initial_sound_lv2_array">
+        <item>이것은 사막에서 자주 볼 수 있는 혹이 있는 동물이에요. \nㄴㅌ는 무엇일까요?</item>
+        <item>이것은 야와에서 화장실이 가고 싶을 때 쓸 수 있는 장소에요. \nㄱㅈㅎㅈㅅ는 무엇일까요?</item>
+        <item>이것은 매우 반짝이는 물건이에요. \nㄷㅇㅇㅁㄷ은 무엇일까요?</item>
+        <item>이것은 먹을 수 있는 국이에요. \nㅂㄷㅉㄱ는 무엇일까요?</item>
+        <item>이것은 7대 불가사의 중 하나에요. \nㅍㄹㅁㄷ는 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_initial_sound_lv2_answer_array">
+        <item>낙타</item>
+        <item>공중화장실</item>
+        <item>다이아몬드</item>
+        <item>부대찌개</item>
+        <item>피라미드</item>
+    </string-array>
+
+    <string-array name="quiz_initial_sound_lv3_array">
+        <item>이것은 닌차힌 상황에 처했을 때 \n이러지도 저러지도 못하는 상황에서 쓰는 사자성어에요. \nㅈㅌㅇㄴ는 무엇일까요?</item>
+        <item>이것은 잘못 들어선 길을 버르고 착한 사람으로 다시 태어나겠다는 결의를 뜻하는 사자성어에요. \nㄱㄱㅊㅅ은 무엇일까요?</item>
+        <item>처지를 바꾸어서 생각하여 본다는 뜻의 사자성어에요. \nㅇㅈㅅㅈ은 무엇일까요?</item>
+        <item>이것은 아들의 성격이나 생활 습관 따위가 아버지로부터 대물림된 것처럼 같거나 비슷하다는 뜻의 사자성어에요. \nㅂㅈㅈㅈ은 무엇일까요?</item>
+        <item>이것은 동쪽을 묻는데 서쪽으로 대답한다는 뜻으로 묻는 말에 전혀 맞지 않는 엉뚱한 대답을 의미하는 사자성어에요. \nㄷㅁㅅㄷ을 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_initial_sound_lv3_answer_array">
+        <item>진퇴양난</item>
+        <item>개과천선</item>
+        <item>역지사지</item>
+        <item>부전자전</item>
+        <item>동문서답</item>
+
+    </string-array>
+
+
+    <string-array name="quiz_calculation_lv1_array">
+        <item>5+7은 무엇일까요?</item>
+        <item>3+7은 무엇일까요?</item>
+        <item>9+5은 무엇일까요?</item>
+        <item>1+2은 무엇일까요?</item>
+        <item>7+1은 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_calculation_lv1_answer_array">
+        <item>12</item>
+        <item>10</item>
+        <item>14</item>
+        <item>3</item>
+        <item>8</item>
+
+    </string-array>
+
+    <string-array name="quiz_calculation_lv2_array">
+        <item>50+57은 무엇일까요?</item>
+        <item>60+43은 무엇일까요?</item>
+        <item>67+23은 무엇일까요?</item>
+        <item>17+43은 무엇일까요?</item>
+        <item>75+15은 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_calculation_lv2_answer_array">
+        <item>107</item>
+        <item>103</item>
+        <item>90</item>
+        <item>60</item>
+        <item>90</item>
+    </string-array>
+
+    <string-array name="quiz_calculation_lv3_array">
+        <item>610+430은 무엇일까요?</item>
+        <item>230+350은 무엇일까요?</item>
+        <item>225+25은 무엇일까요?</item>
+        <item>550+120은 무엇일까요?</item>
+        <item>555+332은 무엇일까요?</item>
+    </string-array>
+
+    <string-array name="quiz_calculation_lv3_answer_array">
+        <item>1040</item>
+        <item>580</item>
+        <item>250</item>
+        <item>670</item>
+        <item>887</item>
+    </string-array>
+
 </resources>
