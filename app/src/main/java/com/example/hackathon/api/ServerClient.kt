@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 
 object ServerClient {
 
-    private const val baseUrl = "https://md.khjcode.com/"
+    private const val baseUrl = "https://young-earth-38363.herokuapp.com/"
     var accessToken : String? = null
 
     fun getInstance() : Retrofit {

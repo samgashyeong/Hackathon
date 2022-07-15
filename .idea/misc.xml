@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Jisu_2/AndroidStudioProjects/Hackathon/app/src/main/res/layout/activity_login.xml" value="0.20437956204379562" />
+        <entry key="..\:/Users/Jisu_2/AndroidStudioProjects/Hackathon/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Jisu_2/AndroidStudioProjects/Hackathon/app/src/main/res/layout/activity_main.xml" value="0.159375" />
+        <entry key="..\:/Users/Jisu_2/AndroidStudioProjects/Hackathon/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Jisu_2/AndroidStudioProjects/Hackathon/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/samga/AndroidStudioProjects/Hackathon2/app/src/main/res/layout/activity_main.xml" value="0.18759770713913496" />
         <entry key="..\:/Users/samga/AndroidStudioProjects/Hackathon2/app/src/main/res/layout/activity_splash.xml" value="0.2" />
