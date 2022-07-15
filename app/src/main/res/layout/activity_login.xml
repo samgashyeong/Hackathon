@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -37,47 +38,44 @@
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이름"
-                android:textSize="25sp"
-                android:textColor="#000"
-                android:fontFamily="@font/nanumsquare_ac_b"
                 android:layout_marginBottom="10sp"
-                />
+                android:fontFamily="@font/nanumsquare_ac_b"
+                android:text="이름"
+                android:textColor="#000"
+                android:textSize="25sp" />
+
             <EditText
                 android:id="@+id/nameEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="25sp"
                 android:background="@drawable/etv_design_1"
                 android:fontFamily="@font/nanumsquare_ac_r"
-                android:textCursorDrawable="@color/second_color"
-                android:textSize="25dp"
                 android:padding="20sp"
-                android:layout_marginBottom="25sp"
-                />
+                android:textCursorDrawable="@color/second_color"
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PIN 번호"
-                android:textSize="25sp"
-                android:textColor="#000"
-                android:fontFamily="@font/nanumsquare_ac_b"
                 android:layout_marginBottom="10sp"
-                />
+                android:fontFamily="@font/nanumsquare_ac_b"
+                android:text="PIN 번호"
+                android:textColor="#000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/pwEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLength="4"
-                android:inputType="numberPassword"
-                android:textCursorDrawable="@color/second_color"
                 android:background="@drawable/etv_design_1"
                 android:fontFamily="@font/nanumsquare_ac_r"
-                android:textSize="25dp"
+                android:inputType="numberPassword"
+                android:maxLength="4"
                 android:padding="20sp"
-                />
+                android:textCursorDrawable="@color/second_color"
+                android:textSize="25dp" />
 
         </LinearLayout>
 
@@ -86,31 +84,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="로그인"
             android:background="@drawable/btn_design_1"
+            android:fontFamily="@font/nanumsquare_ac_r"
+            android:padding="15sp"
+            android:text="로그인"
             android:textColor="#fff"
             android:textSize="25sp"
-            android:fontFamily="@font/nanumsquare_ac_r"
             app:layout_constraintBottom_toTopOf="@+id/registerBtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="15sp"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_design_1"
+            android:fontFamily="@font/nanumsquare_ac_r"
+            android:padding="15sp"
             android:text="회원가입"
             android:textColor="#fff"
             android:textSize="25sp"
-            android:fontFamily="@font/nanumsquare_ac_r"
-            android:background="@drawable/btn_design_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="15sp"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
