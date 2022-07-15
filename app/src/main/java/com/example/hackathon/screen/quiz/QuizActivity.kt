@@ -1,13 +1,23 @@
 package com.example.hackathon.screen.quiz
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.example.hackathon.R
+import com.example.hackathon.SingleTon
+import com.example.hackathon.api.ServerClient
+import com.example.hackathon.data.TimeUpdate
 import com.example.hackathon.databinding.ActivityQuizBinding
 import java.util.*
+import com.example.hackathon.data.Success
+import com.example.hackathon.data.TimeUpdate2
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class QuizActivity : AppCompatActivity() {
 
@@ -152,4 +162,47 @@ class QuizActivity : AppCompatActivity() {
         return array!![arrayNum]
     }
 
+    override fun onStart() {
+        super.onStop()
+        ServerClient.getApiService().end(
+            TimeUpdate2(
+                "01088016084"
+            )
+        ).enqueue(object : Callback<Success> {
+
+            override fun onResponse(call: Call<Success>, response: Response<Success>) {
+                if(response.isSuccessful){
+                    Log.d(TAG, "onResponse: 성공!!!!!!")
+                }
+            }
+
+            override fun onFailure(call: Call<Success>, t: Throwable) {
+                Log.d(TAG, "onFailure: 실패!!!!!!")
+            }
+
+        })
+    }
+
+    override fun onStop() {
+        super.onStart()
+
+        ServerClient.getApiService().start(
+            TimeUpdate(
+                "정지영",
+                "01088016084"
+            )
+        ).enqueue(object : Callback<Success> {
+
+            override fun onResponse(call: Call<Success>, response: Response<Success>) {
+                if(response.isSuccessful){
+                    Log.d(TAG, "onResponse: 성공!!!!!!")
+                }
+            }
+
+            override fun onFailure(call: Call<Success>, t: Throwable) {
+                Log.d(TAG, "onFailure: 실패!!!!!!")
+            }
+
+        })
+    }
 }

@@ -1,22 +1,12 @@
 package com.example.hackathon.screen
 
-import android.annotation.SuppressLint
-import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.telephony.TelephonyManager
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import com.example.hackathon.BatteryCheck
 import com.example.hackathon.R
 import com.example.hackathon.screen.login.LoginActivity
-import com.google.android.gms.auth.api.signin.GoogleSignIn.hasPermissions
-import java.util.jar.Manifest
 
 
 class SplashActivity : AppCompatActivity() {
@@ -26,6 +16,26 @@ class SplashActivity : AppCompatActivity() {
 
         val pref = getSharedPreferences("isFirst", MODE_PRIVATE)
         val first = pref.getBoolean("isFirst", false)
+
+//        ServerClient.getApiService().update(
+//            TimeUpdate(
+//                nameDefine,
+//                SingleTon.phoneDefine
+//            )
+//        ).enqueue(object : Callback<Success> {
+//
+//            override fun onResponse(call: Call<Success>, response: Response<Success>) {
+//                if(response.isSuccessful){
+//                    Log.d(ContentValues.TAG, "onResponse: time성공")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<Success>, t: Throwable) {
+//                Log.d(ContentValues.TAG, "onFailure: time실패")
+//            }
+//
+//        })
+
 
         Handler(Looper.getMainLooper()).postDelayed({ //스플래쉬
             startActivity(Intent(this, LoginActivity::class.java))

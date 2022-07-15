@@ -1,10 +1,10 @@
 package com.example.hackathon.screen.login
 
 import android.Manifest
-import android.Manifest.permission.*
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -16,27 +16,29 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.example.hackathon.R
+import com.example.hackathon.SingleTon
 import com.example.hackathon.api.ServerClient
 import com.example.hackathon.data.LoginUser
 import com.example.hackathon.data.Success
-import com.example.hackathon.data.User
-import com.example.hackathon.databinding.ActivityRegisterBinding
-import com.google.android.gms.auth.api.signin.GoogleSignIn.hasPermissions
-import io.grpc.Server
 import retrofit2.Call
 import retrofit2.Callback
+import com.example.hackathon.data.User
+import com.example.hackathon.databinding.ActivityRegisterBinding
+
 import retrofit2.Response
-import retrofit2.awaitResponse
-import java.util.regex.Pattern
 
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRegisterBinding
     private lateinit var phoneNumber : String
+    private lateinit var emphoneNumber : String
+    private var checkActivity : Boolean = false
+    private var checkSuccess : Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-    
+
         val shared = getSharedPreferences("user", Context.MODE_PRIVATE)
         val editor = shared.edit()
         chkPermission()
@@ -46,11 +48,16 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "빈칸을 입력하셔야돼요!!", Toast.LENGTH_SHORT).show()
             }
             else{
+                if (binding.prophoneEt.text.isBlank())
+                    emphoneNumber = "119"
+                else
+                    emphoneNumber = binding.prophoneEt.text.toString()
+
                 ServerClient.getApiService().register(
                     User(
                         binding.nameEt.text.toString(),
                         phoneNumber,
-                        "119",
+                        "01088016084",
                         binding.pwEt.text.toString()
                     )
                 ).enqueue(object : Callback<Success> {
@@ -59,6 +66,7 @@ class RegisterActivity : AppCompatActivity() {
                         if(response.isSuccessful){
                             login()
                             Log.d(TAG, "onResponse: 성공!!!!!!")
+                            checkActivity = true
                         }
                     }
 
@@ -70,17 +78,30 @@ class RegisterActivity : AppCompatActivity() {
 //                editor.putString("name", binding.nameEt.text.toString())
 //                editor.putString("pw", binding.pwEt.text.toString())
 //                editor.apply()
+                if(checkActivity)
+                    startActivity(
+                        Intent(this, LoginActivity::class.java)
+                    )
             }
 
         }
+
+        binding.backBtn.setOnClickListener {
+            startActivity(
+                Intent(this, LoginActivity::class.java)
+            )
+        }
+
     }
 
     private fun login() {
+
         ServerClient.getApiService().login(LoginUser(binding.nameEt.text.toString(), phoneNumber, binding.pwEt.text.toString()))
             .enqueue(object : Callback<Success> {
                 override fun onResponse(call: Call<Success>, response: Response<Success>) {
-                    if(response.isSuccessful){
-                        Log.d(TAG, "onResponse: 성공!!")
+                    if(response.isSuccessful and call.request().isHttps){
+                        Log.d(TAG, "onResponse: ")
+
                     }
                 }
 
