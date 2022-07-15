@@ -25,10 +25,10 @@
             android:name=".screen.login.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".screen.login.LoginActivity"
+            android:name=".screen.quiz.QuizSuccessActivity"
             android:exported="false" />
         <activity
-            android:name=".screen.SplashActivity"
+            android:name=".screen.quiz.QuizActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +36,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".screen.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.SplashActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".screen.MainActivity"
             android:exported="false" />
