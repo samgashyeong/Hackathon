@@ -36,13 +36,13 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
+    
         val shared = getSharedPreferences("user", Context.MODE_PRIVATE)
         val editor = shared.edit()
         chkPermission()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
         binding.registerBtn.setOnClickListener {
-            if(binding.pwEt.text.isBlank() or binding.nameEt.text.isBlank() or binding.prophonEt.text.isBlank()){
+            if(binding.pwEt.text.isBlank() or binding.nameEt.text.isBlank() ){
                 Toast.makeText(this, "빈칸을 입력하셔야돼요!!", Toast.LENGTH_SHORT).show()
             }
             else{
