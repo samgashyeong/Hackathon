@@ -42,8 +42,8 @@ class RegisterActivity : AppCompatActivity() {
         chkPermission()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
         binding.registerBtn.setOnClickListener {
-            if(binding.pwEt.text.isBlank() or binding.nameEt.text.isBlank()){
-                Toast.makeText(this, "빈칸을 입력하셔야되요!!", Toast.LENGTH_SHORT).show()
+            if(binding.pwEt.text.isBlank() or binding.nameEt.text.isBlank() or binding.prophonEt.text.isBlank()){
+                Toast.makeText(this, "빈칸을 입력하셔야돼요!!", Toast.LENGTH_SHORT).show()
             }
             else{
                 ServerClient.getApiService().register(

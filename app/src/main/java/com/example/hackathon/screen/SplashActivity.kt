@@ -24,7 +24,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-
         val pref = getSharedPreferences("isFirst", MODE_PRIVATE)
         val first = pref.getBoolean("isFirst", false)
 
